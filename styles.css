@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #100a1c;
+  background-image: radial-gradient(
+      50% 30% ellipse at center top,
+      #201e40 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: start;
+}
+
+.container {
+  background-color: #060c21;
+  position: relative;
+  width: 600px;
+  height: auto;
+  margin: 40px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -2;
+  filter: blur(40px);
+  margin: 30px;
+}
+
+.container::before,
+.container::after {
+  background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.container p {
+  font-size: 23px;
+  font-weight: bold;
+  color: darkgray;
+}
+
+#input {
+  width: 350px;
+  height: 50px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 25px;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+
+#addtodo {
+  height: 48px;
+  width: 50px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 30px;
+  margin-left: -31px;
+}
+
+.to-do {
+  margin-top: 25px;
+}
+
+.paragraph-styling {
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#todocontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #f00;
+  border-radius: 2em;
+  color: #f00;
+  display: inline-block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 2px;
+  margin: 0 0 8px;
+  padding: 0;
+  text-align: center;
+  width: 20px;
+  margin-left: 50vh;
+  cursor: pointer;
+}
+
+.container-div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
